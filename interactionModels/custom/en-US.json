@@ -1,0 +1,355 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "MonthType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1226859767401.22669348227"
+              }
+            },
+            {
+              "name": "day_ordinal",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.289760995762.840114124519"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.572299073939.156430299382"
+              }
+            }
+          ],
+          "name": "Reflection",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "any_day",
+              "elicitationRequired": false,
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "date_possessive",
+              "elicitationRequired": false,
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "reflection_section",
+              "elicitationRequired": false,
+              "type": "reflection_section",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DiaAnteriorIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "bye"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "MonthType",
+              "samples": [
+                "last month",
+                "this month",
+                " {month}"
+              ]
+            },
+            {
+              "name": "day_ordinal",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "from yesterday",
+                "yesterday",
+                "today\u0027s reflection",
+                "from today",
+                "today",
+                "from {day_ordinal}",
+                "{day_ordinal}",
+                "from the {day_ordinal}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "last year",
+                "{year}",
+                "this year"
+              ]
+            }
+          ],
+          "name": "Reflection",
+          "samples": [
+            "What is the reflection for today",
+            "What is yesterday\u0027s reflection",
+            "What is today\u0027s reflection",
+            "Tell me the reflection for {month} {day_ordinal}",
+            "What is the reflection for {month} {day_ordinal}",
+            "Tell me the reflection for {month} {day_ordinal} {year}",
+            "What is the reflection for {month} {day_ordinal} {year}",
+            "Tell me the reflection for the {day_ordinal} day of {month} of {year}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "any_day",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "date_possessive",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "reflection_section",
+              "type": "reflection_section"
+            }
+          ],
+          "name": "DiaAnteriorIntent",
+          "samples": [
+            "{date_possessive}",
+            "{date_possessive} {reflection_section}",
+            "the {date_possessive} {reflection_section} reflection",
+            "What was {date_possessive} {reflection_section} reflection",
+            "I want to hear {date_possessive} {reflection_section} reflection",
+            "I would like {date_possessive}",
+            "the one from {date_possessive}",
+            "tell me {date_possessive} reflection"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "january"
+              },
+              "id": "01"
+            },
+            {
+              "name": {
+                "value": "february"
+              },
+              "id": "02"
+            },
+            {
+              "name": {
+                "value": "march"
+              },
+              "id": "03"
+            },
+            {
+              "name": {
+                "value": "april"
+              },
+              "id": "04"
+            },
+            {
+              "name": {
+                "value": "may"
+              },
+              "id": "05"
+            },
+            {
+              "name": {
+                "value": "june"
+              },
+              "id": "06"
+            },
+            {
+              "name": {
+                "value": "july"
+              },
+              "id": "07"
+            },
+            {
+              "name": {
+                "value": "august"
+              },
+              "id": "08"
+            },
+            {
+              "name": {
+                "value": "september"
+              },
+              "id": "09"
+            },
+            {
+              "name": {
+                "value": "october"
+              },
+              "id": "10"
+            },
+            {
+              "name": {
+                "value": "november"
+              },
+              "id": "11"
+            },
+            {
+              "name": {
+                "value": "december"
+              },
+              "id": "12"
+            }
+          ],
+          "name": "MonthType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "last sunday"
+              }
+            },
+            {
+              "name": {
+                "value": "Sunday\u0027s"
+              }
+            },
+            {
+              "name": {
+                "value": "tomorrow\u0027s"
+              }
+            },
+            {
+              "name": {
+                "value": "today\u0027s"
+              }
+            },
+            {
+              "name": {
+                "value": "yesterday\u0027s"
+              }
+            }
+          ],
+          "name": "date_possessive"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "reflection"
+              }
+            },
+            {
+              "name": {
+                "value": "word"
+              }
+            }
+          ],
+          "name": "reflection_section"
+        }
+      ],
+      "invocationName": "weekly reflections"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please give me the full date day, month and year"
+          }
+        ],
+        "id": "Confirm.Intent.430855711474"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what month"
+          },
+          {
+            "type": "PlainText",
+            "value": "ok, day {day_ordinal} but what month?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Please give me the month"
+          }
+        ],
+        "id": "Elicit.Slot.1226859767401.22669348227"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "ok, you want the reflection from the {day_ordinal} of {month} , but from what year?"
+          },
+          {
+            "type": "PlainText",
+            "value": "which year?"
+          }
+        ],
+        "id": "Elicit.Slot.572299073939.156430299382"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "tell me what day of the {month}"
+          },
+          {
+            "type": "PlainText",
+            "value": "what day would you like the reflection for?"
+          }
+        ],
+        "id": "Elicit.Slot.289760995762.840114124519"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "of the {day} "
+          }
+        ],
+        "id": "Confirm.Slot.471346698299.1012315070885"
+      }
+    ]
+  }
+}
