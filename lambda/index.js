@@ -11,7 +11,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome to take five weekly reflections Tuesday april 16 2024, wich weekly reflection or word would you like to try?';
+        const speakOutput = 'Welcome to take five weekly reflections using axios Monday may 6 2024, wich weekly reflection or word would you like to try?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
