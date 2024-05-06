@@ -3,6 +3,9 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 
+// Declaracion del uso de la libreria axios - lunes 6 mayo 2024
+const axios = require('axios');
+
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
