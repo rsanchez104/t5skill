@@ -3,7 +3,7 @@
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
 
-// Declaracion del uso de la libreria axios - lunes 6 mayo 2024
+// Declaracion del uso de la libreria axios - lunes 6 mayo 2024 Y confirmando miércoles 19 junio 2024 
 const axios = require('axios');
 
 const LaunchRequestHandler = {
@@ -11,7 +11,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome to take five weekly reflections using axios Monday may 6 2024, wich weekly reflection or word would you like to try?';
+        const speakOutput = 'Welcome to take five weekly reflections using axios Wendsday july 3 2024, wich weekly reflection or word would you like to try?';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
